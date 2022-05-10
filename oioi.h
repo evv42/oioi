@@ -176,7 +176,7 @@ unsigned char* oioi_read(char* file, int* w, int* h, char chan){
 	oioi_file* img;
 	
 	//check if file is a valid file:
-	img = oioi_file_open(file,"r");
+	img = oioi_file_open(file,"rb");
 	if(img == NULL)return NULL;//Invalid file
 	
 	unsigned char* r = oioi_dec(img, w, h, chan);
